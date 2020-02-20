@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @cocktail.name %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Ingredient</th>
+      <th colspan="3"></th>
+    </tr>
+</thead>
+
+<tbody>
+  <% @cocktail.doses.each do |dose| %>
+  <tr>
+    <td><%= dose.description %></td>
+    <td><%= dose.ingredient.name %></td>
+    <td><%= link_to 'Delete', dose, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+  <% end %>
+ </tbody>
+
+</table>
+
+<br>
+<%= simple_form_for([@cocktail, @dose]) do |form| %>
+<p><strong>Add a new dose:</strong></p>
+    <%= form.input :description, placeholder: "How much" %>
+    <%= form.input :ingredient_id, collection: @ingredients %>
+    <%= form.button :submit, class:"btn btn-primary"%>
+  <% end %>
+
+<br>
+<%= link_to 'Back', cocktails_path %> |
+<br>
+<%= link_to 'New Cocktail', new_cocktail_path(@cocktail) %>
+
+
+
+
