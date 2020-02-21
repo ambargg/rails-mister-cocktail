@@ -1,7 +1,19 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
 
-<% end %>
 
-<%= link_to 'Create a new cocktail', new_cocktail_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "olena-sergienko-JjGLEN7T8xI-unsplash.jpg" %>');">
+  <div class="container">
+    <h1 class="text-center">cocktails</h1>
+    <div class="button_create">
+      <%= link_to 'Create a new cocktail', new_cocktail_path, class:"btn btn-ghost" %>
+    </div>
+  </div>
+</div>
+
+<div class="cards">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "brooke-lark-t7wg7BJU2-s-unsplash.jpg" %>')">
+      <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+  </div>
+  <% end %>
+</div>
+

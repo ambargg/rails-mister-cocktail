@@ -1,3 +1,80 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.button_create {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-ghost {
+  color: white;
+  border: 1px solid white;
+  &:hover {
+        border: 1px solid #0E0000;
+    }
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 52px;
+  font-weight: lighter;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  & h2 a {
+  color: white;
+  text-decoration: none;
+  font-weight: initial;
+  font-size: 26px;
+   &:hover {
+        color: white;
+        font-weight: bold;
+       }
+}
+  font-size: 24px;
+  font-weight: light;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+// .card-category h2 a {
+//   color: white;
+//   text-decoration: none;
+// }
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
+}

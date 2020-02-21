@@ -1,0 +1,9 @@
+<%= simple_form_for([cocktail, dose]) do |form| %>
+
+<p><strong>Add a new dose:</strong></p>
+    <%= form.input :description, placeholder: "How much" %>
+    <%= form.association :ingredient %>
+    <%= form.button :submit, class:"btn btn-primary"%>
+  <% end %>
+
+

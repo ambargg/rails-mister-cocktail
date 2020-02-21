@@ -24,17 +24,19 @@
 </table>
 
 <br>
-<%= simple_form_for([@cocktail, @dose]) do |form| %>
-<p><strong>Add a new dose:</strong></p>
-    <%= form.input :description, placeholder: "How much" %>
-    <%= form.input :ingredient_id, collection: @ingredients %>
-    <%= form.button :submit, class:"btn btn-primary"%>
-  <% end %>
+<div class=“container”>
+<strong>Add a new dose</strong>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+</div>
 
 <br>
 <%= link_to 'Back', cocktails_path %> |
 <br>
-<%= link_to 'New Cocktail', new_cocktail_path(@cocktail) %>
+<%= link_to 'New Cocktail', new_cocktail_path %>
 
 
 
