@@ -1,5 +1,5 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show]
+  # before_action :set_cocktail, only: [:show]
 
   def index
     @cocktails = Cocktail.all
@@ -21,6 +21,7 @@ class CocktailsController < ApplicationController
   def show
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
+    # @review = Review.new
     @ingredients = Ingredient.all
   end
 

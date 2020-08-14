@@ -18,7 +18,7 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 gem 'autoprefixer-rails'
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '~> 5.10.2'
 gem 'simple_form'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -34,6 +34,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'cloudinary', '~> 1.12.0'
+gem 'carrierwave', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
